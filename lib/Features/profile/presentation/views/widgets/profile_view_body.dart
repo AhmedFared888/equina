@@ -1,5 +1,8 @@
+import 'package:equina/core/utils/assets.dart';
 import 'package:equina/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+
+import 'profile_list_view.dart';
 
 class ProfileViewBody extends StatelessWidget {
   const ProfileViewBody({super.key});
@@ -33,13 +36,29 @@ class ProfileViewBody extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.only(top: 30),
         child: Center(
-          child: Column(children: [
-            Image.asset('assets/images/profile.png'),
-            Text(
-              'Equina User',
-              style: Styles.textStyleDemi,
-            )
-          ]),
+          child: Column(
+            children: [
+              Image.asset(AssetsData.profile),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                'Equina User',
+                style: Styles.textStyleDemi,
+              ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12.0),
+                    ),
+                    child: ProfileListView(),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
