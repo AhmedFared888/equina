@@ -1,0 +1,1 @@
+const kFutura = 'Futura';
