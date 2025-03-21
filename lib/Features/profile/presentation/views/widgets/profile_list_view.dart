@@ -59,7 +59,14 @@ class ProfileListView extends StatelessWidget {
           onTap: () {},
         ),
         SizedBox(
-          height: 25,
+          height: 20,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 17),
+          child: Divider(),
+        ),
+        SizedBox(
+          height: 20,
         ),
         ProfileListViewItem(
           title: 'Log Out',
