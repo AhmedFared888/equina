@@ -1,5 +1,6 @@
 class AssetsData {
   static const profile = 'assets/images/profile.png';
+  static const logo = 'assets/images/logo_text.png';
   static const editProfile = 'assets/images/edit_profile.png';
   static const myPoint = 'assets/images/points.png';
   static const myNotification = 'assets/images/notification.png';
@@ -12,4 +13,7 @@ class AssetsData {
   static const information = 'assets/images/info.png';
   static const contactUs = 'assets/images/contact-us.png';
   static const logOut = 'assets/images/logout.png';
+  static const redCross = 'assets/images/red_cross.png';
+  static const profileGrey = 'assets/images/profile_grey.png';
+  static const profileBlue = 'assets/images/person_blue.png.png';
 }
