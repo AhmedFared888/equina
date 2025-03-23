@@ -1,3 +1,4 @@
+import 'package:equina/Features/profile/presentation/views/profile_view.dart';
 import 'package:equina/constans.dart';
 import 'package:equina/core/utils/assets.dart';
 import 'package:equina/core/utils/styles.dart';
@@ -81,7 +82,12 @@ class HomeAppBarActions extends StatelessWidget {
                   12,
                 )),
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ProfileView()),
+                );
+              },
               child: Padding(
                 padding: const EdgeInsets.all(2.0),
                 child: Image.asset(AssetsData.profile),

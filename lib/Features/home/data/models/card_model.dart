@@ -3,17 +3,17 @@ class CardModel {
   String? name;
   dynamic competenciesId;
   String? description;
-  int? classDuration;
+  double? classDuration;
   int? categoryId;
   String? categoryName;
-  int? minPax;
-  int? maxPax;
-  int? semiPrivateMinPax;
-  int? semiPrivateMaxPax;
-  int? privateMinPax;
-  int? privateMaxPax;
+  double? minPax;
+  double? maxPax;
+  double? semiPrivateMinPax;
+  double? semiPrivateMaxPax;
+  double? privateMinPax;
+  double? privateMaxPax;
   String? lessonDescription;
-  int? numOfClasses;
+  double? numOfClasses;
   int? lessonLevel;
   bool? beginner;
   bool? intermediate;
@@ -21,7 +21,7 @@ class CardModel {
   String? dbName;
   int? rate;
   int? rateCount;
-  int? discount;
+  double? discount;
   int? givePoints;
   int? groupRedeemPoints;
   int? privateRedeemPoints;
@@ -41,18 +41,18 @@ class CardModel {
   bool? adultPrivate;
   bool? childSemiPrivate;
   bool? adultSemiPrivate;
-  int? childOwnHorseGroup;
-  int? childClubHorseGroup;
-  int? childOwnHorsePrivate;
-  int? childClubHorsePrivate;
-  int? childOwnHorseSemiPrivate;
-  int? childClubHorseSemiPrivate;
-  int? adultOwnHorseGroup;
-  int? adultClubHorseGroup;
-  int? adultOwnHorsePrivate;
-  int? adultClubHorsePrivate;
-  int? adultOwnHorseSemiPrivate;
-  int? adultClubHorseSemiPrivate;
+  double? childOwnHorseGroup;
+  double? childClubHorseGroup;
+  double? childOwnHorsePrivate;
+  double? childClubHorsePrivate;
+  double? childOwnHorseSemiPrivate;
+  double? childClubHorseSemiPrivate;
+  double? adultOwnHorseGroup;
+  double? adultClubHorseGroup;
+  double? adultOwnHorsePrivate;
+  double? adultClubHorsePrivate;
+  double? adultOwnHorseSemiPrivate;
+  double? adultClubHorseSemiPrivate;
   String? startingDate;
   String? seasonStartingDate;
   String? seasonEndDate;
@@ -82,28 +82,28 @@ class CardModel {
   String? tripInterval3FromTime;
   String? tripInterval3ToTime;
   bool? include1ClassPackage;
-  int? packageBuy1;
-  int? packageBuy2;
-  int? packageBuy3;
-  int? packagePercentage1Discount;
-  int? packageFixed1Discount;
-  int? packagePoints1;
-  int? packagePercentage2Discount;
-  int? packageFixed2Discount;
-  int? packagePoints2;
-  int? packagePercentage3Discount;
-  int? packageFixed3Discount;
-  int? packagePoints3;
+  double? packageBuy1;
+  double? packageBuy2;
+  double? packageBuy3;
+  double? packagePercentage1Discount;
+  double? packageFixed1Discount;
+  double? packagePoints1;
+  double? packagePercentage2Discount;
+  double? packageFixed2Discount;
+  double? packagePoints2;
+  double? packagePercentage3Discount;
+  double? packageFixed3Discount;
+  double? packagePoints3;
   bool? clubPromotion;
-  int? additionalDiscount;
-  int? additionalDiscountFixed;
-  int? additionalDiscountPercentage;
+  double? additionalDiscount;
+  double? additionalDiscountFixed;
+  double? additionalDiscountPercentage;
   bool? equinaPromotion;
   bool? booked;
   String? lessonLevelString;
   String? lessonLevelFilter;
-  List<String>? days;
-  int? startingPrice;
+  List<dynamic>? days;
+  double? startingPrice;
   String? imageUrl;
   bool? group;
   bool? private;
@@ -114,7 +114,7 @@ class CardModel {
   String? lat;
   String? long;
   String? clubAddress;
-  int? clubRating;
+  double? clubRating;
   String? clubDescription;
   int? rangeOfPricesFrom;
   int? rangeOfPricesTo;
@@ -256,17 +256,17 @@ class CardModel {
         name: json['name'] as String?,
         competenciesId: json['competencies_id'] as dynamic,
         description: json['description'] as String?,
-        classDuration: json['class_duration'] as int?,
+        classDuration: json['class_duration'] as double?,
         categoryId: json['category_id'] as int?,
         categoryName: json['category_name'] as String?,
-        minPax: json['min_pax'] as int?,
-        maxPax: json['max_pax'] as int?,
-        semiPrivateMinPax: json['semi_private_min_pax'] as int?,
-        semiPrivateMaxPax: json['semi_private_max_pax'] as int?,
-        privateMinPax: json['private_min_pax'] as int?,
-        privateMaxPax: json['private_max_pax'] as int?,
+        minPax: json['min_pax'] as double?,
+        maxPax: json['max_pax'] as double?,
+        semiPrivateMinPax: json['semi_private_min_pax'] as double?,
+        semiPrivateMaxPax: json['semi_private_max_pax'] as double?,
+        privateMinPax: json['private_min_pax'] as double?,
+        privateMaxPax: json['private_max_pax'] as double?,
         lessonDescription: json['lesson_description'] as String?,
-        numOfClasses: json['num_of_classes'] as int?,
+        numOfClasses: json['num_of_classes'] as double?,
         lessonLevel: json['lesson_level'] as int?,
         beginner: json['beginner'] as bool?,
         intermediate: json['intermediate'] as bool?,
@@ -274,7 +274,7 @@ class CardModel {
         dbName: json['db_name'] as String?,
         rate: json['rate'] as int?,
         rateCount: json['rate_count'] as int?,
-        discount: json['discount'] as int?,
+        discount: json['discount'] as double?,
         givePoints: json['give_points'] as int?,
         groupRedeemPoints: json['group_redeem_points'] as int?,
         privateRedeemPoints: json['private_redeem_points'] as int?,
@@ -294,20 +294,22 @@ class CardModel {
         adultPrivate: json['adult_private'] as bool?,
         childSemiPrivate: json['child_semi_private'] as bool?,
         adultSemiPrivate: json['adult_semi_private'] as bool?,
-        childOwnHorseGroup: json['child_own_horse_group'] as int?,
-        childClubHorseGroup: json['child_club_horse_group'] as int?,
-        childOwnHorsePrivate: json['child_own_horse_private'] as int?,
-        childClubHorsePrivate: json['child_club_horse_private'] as int?,
-        childOwnHorseSemiPrivate: json['child_own_horse_semi_private'] as int?,
+        childOwnHorseGroup: json['child_own_horse_group'] as double?,
+        childClubHorseGroup: json['child_club_horse_group'] as double?,
+        childOwnHorsePrivate: json['child_own_horse_private'] as double?,
+        childClubHorsePrivate: json['child_club_horse_private'] as double?,
+        childOwnHorseSemiPrivate:
+            json['child_own_horse_semi_private'] as double?,
         childClubHorseSemiPrivate:
-            json['child_club_horse_semi_private'] as int?,
-        adultOwnHorseGroup: json['adult_own_horse_group'] as int?,
-        adultClubHorseGroup: json['adult_club_horse_group'] as int?,
-        adultOwnHorsePrivate: json['adult_own_horse_private'] as int?,
-        adultClubHorsePrivate: json['adult_club_horse_private'] as int?,
-        adultOwnHorseSemiPrivate: json['adult_own_horse_semi_private'] as int?,
+            json['child_club_horse_semi_private'] as double?,
+        adultOwnHorseGroup: json['adult_own_horse_group'] as double?,
+        adultClubHorseGroup: json['adult_club_horse_group'] as double?,
+        adultOwnHorsePrivate: json['adult_own_horse_private'] as double?,
+        adultClubHorsePrivate: json['adult_club_horse_private'] as double?,
+        adultOwnHorseSemiPrivate:
+            json['adult_own_horse_semi_private'] as double?,
         adultClubHorseSemiPrivate:
-            json['adult_club_horse_semi_private'] as int?,
+            json['adult_club_horse_semi_private'] as double?,
         startingDate: json['starting_date'] as String?,
         seasonStartingDate: json['season_starting_date'] as String?,
         seasonEndDate: json['season_end_date'] as String?,
@@ -337,32 +339,32 @@ class CardModel {
         tripInterval3FromTime: json['trip_interval_3_from_time'] as String?,
         tripInterval3ToTime: json['trip_interval_3_to_time'] as String?,
         include1ClassPackage: json['include_1_class_package'] as bool?,
-        packageBuy1: json['package_buy_1'] as int?,
-        packageBuy2: json['package_buy_2'] as int?,
-        packageBuy3: json['package_buy_3'] as int?,
+        packageBuy1: json['package_buy_1'] as double?,
+        packageBuy2: json['package_buy_2'] as double?,
+        packageBuy3: json['package_buy_3'] as double?,
         packagePercentage1Discount:
-            json['package_percentage_1_discount'] as int?,
-        packageFixed1Discount: json['package_fixed_1_discount'] as int?,
-        packagePoints1: json['package_points_1'] as int?,
+            json['package_percentage_1_discount'] as double?,
+        packageFixed1Discount: json['package_fixed_1_discount'] as double?,
+        packagePoints1: json['package_points_1'] as double?,
         packagePercentage2Discount:
-            json['package_percentage_2_discount'] as int?,
-        packageFixed2Discount: json['package_fixed_2_discount'] as int?,
-        packagePoints2: json['package_points_2'] as int?,
+            json['package_percentage_2_discount'] as double?,
+        packageFixed2Discount: json['package_fixed_2_discount'] as double?,
+        packagePoints2: json['package_points_2'] as double?,
         packagePercentage3Discount:
-            json['package_percentage_3_discount'] as int?,
-        packageFixed3Discount: json['package_fixed_3_discount'] as int?,
-        packagePoints3: json['package_points_3'] as int?,
+            json['package_percentage_3_discount'] as double?,
+        packageFixed3Discount: json['package_fixed_3_discount'] as double?,
+        packagePoints3: json['package_points_3'] as double?,
         clubPromotion: json['club_promotion'] as bool?,
-        additionalDiscount: json['additional_discount'] as int?,
-        additionalDiscountFixed: json['additional_discount_fixed'] as int?,
+        additionalDiscount: json['additional_discount'] as double?,
+        additionalDiscountFixed: json['additional_discount_fixed'] as double?,
         additionalDiscountPercentage:
-            json['additional_discount_percentage'] as int?,
+            json['additional_discount_percentage'] as double?,
         equinaPromotion: json['equina_promotion'] as bool?,
         booked: json['booked'] as bool?,
         lessonLevelString: json['lesson_level_string'] as String?,
         lessonLevelFilter: json['lesson_level_filter'] as String?,
-        days: json['days'] as List<String>?,
-        startingPrice: json['starting_price'] as int?,
+        days: json['days'] as List<dynamic>?,
+        startingPrice: json['starting_price'] as double?,
         imageUrl: json['image_url'] as String?,
         group: json['group'] as bool?,
         private: json['private'] as bool?,
@@ -373,7 +375,7 @@ class CardModel {
         lat: json['lat'] as String?,
         long: json['long'] as String?,
         clubAddress: json['club_address'] as String?,
-        clubRating: json['club_rating'] as int?,
+        clubRating: json['club_rating'] as double?,
         clubDescription: json['club_description'] as String?,
         rangeOfPricesFrom: json['range_of_prices_from'] as int?,
         rangeOfPricesTo: json['range_of_prices_to'] as int?,

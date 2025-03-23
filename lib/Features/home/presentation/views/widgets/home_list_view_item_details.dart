@@ -1,3 +1,4 @@
+import 'package:equina/Features/home/data/models/card_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../constans.dart';
@@ -5,15 +6,15 @@ import '../../../../../core/utils/styles.dart';
 import 'build_day_button.dart';
 
 class HomeListViewItemDetails extends StatelessWidget {
-  const HomeListViewItemDetails({super.key});
-
+  const HomeListViewItemDetails({super.key, required this.cardModel});
+  final CardModel cardModel;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Assessment Tina',
+          cardModel.name!,
           style: Styles.textStyleDemi.copyWith(
             color: Colors.white,
           ),
@@ -30,7 +31,7 @@ class HomeListViewItemDetails extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(
-                    'Talaat Club',
+                    cardModel.clubName!,
                     style: Styles.textStyleMedium.copyWith(
                       color: KMainColor,
                     ),
@@ -42,20 +43,20 @@ class HomeListViewItemDetails extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         Text(
-          'Description: asfrwaetyefsdfsdf',
+          'Description: ${cardModel.description!}',
           style: Styles.textStyleRegular.copyWith(color: Colors.white),
         ),
         const SizedBox(height: 5),
         Text(
-          'Type: Assessment',
+          'Type: ${cardModel.lessontype}',
           style: Styles.textStyleRegular.copyWith(color: Colors.white),
         ),
         Text(
-          'Class Duration: 45 min',
+          'Class Duration: ${cardModel.classDuration!.round()} Min',
           style: Styles.textStyleRegular.copyWith(color: Colors.white),
         ),
         Text(
-          'Number of Classes: 13',
+          'Number of Classes: ${cardModel.numOfClasses!.round()}',
           style: Styles.textStyleRegular.copyWith(color: Colors.white),
         ),
         const Spacer(),
@@ -77,7 +78,7 @@ class HomeListViewItemDetails extends StatelessWidget {
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    '150 AED',
+                    '100 AED',
                     style: Styles.textStyleMedium.copyWith(
                       color: Colors.white,
                     ),

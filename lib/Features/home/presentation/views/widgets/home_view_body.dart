@@ -1,5 +1,5 @@
 import 'package:equina/core/utils/assets.dart';
-import 'package:equina/core/utils/widgets/custom_text_form_field.dart';
+import 'package:equina/core/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 import 'home_app_bar.dart';
@@ -48,7 +48,9 @@ class HomeViewBody extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            const Expanded(child: HomeListView()),
+            const Expanded(
+              child: HomeListView(),
+            ),
           ],
         ),
       ),

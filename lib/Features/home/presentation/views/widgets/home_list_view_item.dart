@@ -1,3 +1,4 @@
+import 'package:equina/Features/home/data/models/card_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../constans.dart';
@@ -6,14 +7,14 @@ import 'home_list_view_item_details.dart';
 import 'offer_card.dart';
 
 class HomeListViewItem extends StatelessWidget {
-  const HomeListViewItem({super.key});
-
+  const HomeListViewItem({super.key, required this.cardModel});
+  final CardModel cardModel;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        height: 300, // Adjust the height
+        height: 300,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
@@ -26,22 +27,22 @@ class HomeListViewItem extends StatelessWidget {
         ),
         child: Row(
           children: [
-            // Left Section
             Expanded(
               flex: 2,
               child: Container(
                 padding: const EdgeInsets.all(16),
                 decoration: const BoxDecoration(
-                  color: KMainColor, // Blue color
+                  color: KMainColor,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20),
                     bottomLeft: Radius.circular(20),
                   ),
                 ),
-                child: const HomeListViewItemDetails(),
+                child: HomeListViewItemDetails(
+                  cardModel: cardModel,
+                ),
               ),
             ),
-            // Right Section
             Expanded(
               flex: 1,
               child: Container(
