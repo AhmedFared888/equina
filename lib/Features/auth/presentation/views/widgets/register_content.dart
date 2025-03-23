@@ -18,34 +18,34 @@ class RegisterContent extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Text(
+            const Text(
               'Name',
               style: Styles.textStyleMedium,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             CustomTextFormField(
               hintText: 'Name',
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Row(
               children: [
-                Text(
+                const Text(
                   'Phone Number',
                   style: Styles.textStyleMedium,
                 ),
-                Spacer(),
+                const Spacer(),
                 Text(
                   'phone not verfied',
                   style: Styles.textStyleRegular.copyWith(color: Colors.red),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 SizedBox(
@@ -57,21 +57,21 @@ class RegisterContent extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             CustomTextFormField(
               hintText: 'Phone Number',
               dropdown: CustomDropDownButton(),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               'Password',
               style: Styles.textStyleMedium,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             CustomTextFormField(
@@ -79,14 +79,14 @@ class RegisterContent extends StatelessWidget {
               obscureText: true,
               hintText: 'Password',
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               'Confirm Password',
               style: Styles.textStyleMedium,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             CustomTextFormField(
@@ -94,11 +94,11 @@ class RegisterContent extends StatelessWidget {
               obscureText: true,
               hintText: 'Confirm Password',
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
-            AgreeingTheTerms(),
-            SizedBox(
+            const AgreeingTheTerms(),
+            const SizedBox(
               height: 25,
             ),
             CustomButton(

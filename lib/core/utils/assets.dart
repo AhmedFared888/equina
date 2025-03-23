@@ -16,4 +16,8 @@ class AssetsData {
   static const redCross = 'assets/images/red_cross.png';
   static const profileGrey = 'assets/images/profile_grey.png';
   static const profileBlue = 'assets/images/person_blue.png.png';
+  static const horse = 'assets/images/horse.png';
+  static const familiy = 'assets/images/family.png';
+  static const filters = 'assets/images/filter.png';
+  static const girleRider = 'assets/images/girl_rider.jpg';
 }

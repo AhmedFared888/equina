@@ -13,7 +13,7 @@ class AuthViewBody extends StatelessWidget {
       body: SizedBox(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 70,
             ),
             Padding(
@@ -22,31 +22,31 @@ class AuthViewBody extends StatelessWidget {
                 AssetsData.logo,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Text(
+            const Text(
               'Welcome to equina',
               style: Styles.textStyleDemi,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               'equinaCLUB, book your',
               style: Styles.textStyleRegular,
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text(
+            const Text(
               'class - advance your game',
               style: Styles.textStyleRegular,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Expanded(
+            const Expanded(
               child: AuthTabBar(),
             ),
           ],

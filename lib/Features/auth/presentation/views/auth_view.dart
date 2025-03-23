@@ -6,6 +6,6 @@ class AuthView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AuthViewBody();
+    return const AuthViewBody();
   }
 }

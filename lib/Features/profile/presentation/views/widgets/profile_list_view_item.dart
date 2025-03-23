@@ -37,7 +37,7 @@ class ProfileListViewItem extends StatelessWidget {
         title,
         style: Styles.textStyleRegular,
       ),
-      trailing: Icon(
+      trailing: const Icon(
         Icons.chevron_right,
         size: 35,
       ),

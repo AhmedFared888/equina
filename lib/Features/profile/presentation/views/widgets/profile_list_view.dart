@@ -9,7 +9,7 @@ class ProfileListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 15,
         ),
         ProfileListViewItem(
@@ -58,14 +58,14 @@ class ProfileListView extends StatelessWidget {
           image: AssetsData.contactUs,
           onTap: () {},
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 17),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 17),
           child: Divider(),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         ProfileListViewItem(

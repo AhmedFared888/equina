@@ -49,9 +49,9 @@ class _UserTypeItemState extends State<UserTypeItem> {
             children: [
               Row(
                 children: [
-                  Spacer(),
+                  const Spacer(),
                   Checkbox(
-                    shape: CircleBorder(), // Make the checkbox circular
+                    shape: const CircleBorder(), // Make the checkbox circular
                     value: widget.isSelected,
                     onChanged: (bool? value) {
                       setState(() {
@@ -68,7 +68,7 @@ class _UserTypeItemState extends State<UserTypeItem> {
                   widget.isSelected ? widget.selectedImage : widget.image,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Text(

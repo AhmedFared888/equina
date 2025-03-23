@@ -33,7 +33,7 @@ class _AuthTabBarState extends State<AuthTabBar>
     return Column(children: [
       TabBar(
         controller: _tabController,
-        tabs: [
+        tabs: const [
           Tab(
             text: 'Sign In',
           ),
@@ -46,12 +46,12 @@ class _AuthTabBarState extends State<AuthTabBar>
         unselectedLabelStyle: Styles.textStyleRegular.copyWith(fontSize: 20.0),
         indicatorColor: KMainColor,
         dividerColor: Colors.white,
-        indicatorPadding: EdgeInsets.symmetric(horizontal: -80),
+        indicatorPadding: const EdgeInsets.symmetric(horizontal: -80),
       ),
       Expanded(
         child: TabBarView(
           controller: _tabController,
-          children: [
+          children: const [
             SigninContent(),
             RegisterContent(),
           ],

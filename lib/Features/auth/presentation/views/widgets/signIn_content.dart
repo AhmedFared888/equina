@@ -24,7 +24,7 @@ class _SigninContentState extends State<SigninContent> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -43,7 +43,7 @@ class _SigninContentState extends State<SigninContent> {
                 selectedTextStyle: Styles.textStyleDemi,
                 unselectedTextStyle: Styles.textStyleRegular,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               UserTypeItem(
@@ -61,38 +61,38 @@ class _SigninContentState extends State<SigninContent> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Text(
+          const Text(
             'Phone Number',
             style: Styles.textStyleMedium,
           ),
           CustomTextFormField(
             hintText: 'Phone Number',
-            dropdown: CustomDropDownButton(),
+            dropdown: const CustomDropDownButton(),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Text(
+          const Text(
             'Password',
             style: Styles.textStyleMedium,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           CustomTextFormField(
-            showEyeIcon: Icon(Icons.visibility_sharp),
+            showEyeIcon: const Icon(Icons.visibility_sharp),
             obscureText: true,
             hintText: 'Password',
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
             children: [
-              Spacer(),
+              const Spacer(),
               Text(
                 'OR Login ',
                 style: Styles.textStyleRegular.copyWith(color: kGreyColor),
@@ -109,12 +109,12 @@ class _SigninContentState extends State<SigninContent> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
             children: [
-              Spacer(),
+              const Spacer(),
               Text(
                 'Forget Password?',
                 style: Styles.textStyleMedium.copyWith(
@@ -123,7 +123,7 @@ class _SigninContentState extends State<SigninContent> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           CustomButton(

@@ -18,7 +18,7 @@ class _AgreeingTheTermsState extends State<AgreeingTheTerms> {
     return Row(
       children: [
         Checkbox(
-          shape: CircleBorder(), // Make the checkbox circular
+          shape: const CircleBorder(), // Make the checkbox circular
           value: isChecked,
           onChanged: (bool? value) {
             setState(() {
@@ -26,7 +26,7 @@ class _AgreeingTheTermsState extends State<AgreeingTheTerms> {
             });
           },
         ),
-        Text(
+        const Text(
           'I have read and agreed to the ',
           style: Styles.textStyleRegular,
         ),
@@ -40,7 +40,7 @@ class _AgreeingTheTermsState extends State<AgreeingTheTerms> {
             ),
           ),
         ),
-        Text(
+        const Text(
           ' and ',
           style: Styles.textStyleRegular,
         ),

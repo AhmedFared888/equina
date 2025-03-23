@@ -27,12 +27,12 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
               children: [
                 Text(
                   country['flag']!,
-                  style: TextStyle(fontSize: 24),
+                  style: const TextStyle(fontSize: 24),
                 ),
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
                 Text(
                   country['code']!,
-                  style: TextStyle(fontSize: 16),
+                  style: const TextStyle(fontSize: 16),
                 ),
               ],
             ),

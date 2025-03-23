@@ -10,6 +10,7 @@ class CustomTextFormField extends StatelessWidget {
     this.obscureText = false,
     this.dropdown,
     this.showEyeIcon,
+    this.prefixIcon,
   });
 
   final String? hintText;
@@ -17,6 +18,7 @@ class CustomTextFormField extends StatelessWidget {
   Function(String)? onChanged;
   final Widget? dropdown;
   final Widget? showEyeIcon;
+  final Widget? prefixIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -26,24 +28,20 @@ class CustomTextFormField extends StatelessWidget {
         Expanded(
           child: TextFormField(
             obscureText: obscureText!,
-            validator: (data) {
-              if (data!.isEmpty) {
-                return 'field is required';
-              }
-            },
             onChanged: onChanged,
             decoration: InputDecoration(
               suffixIcon: showEyeIcon,
+              prefixIcon: prefixIcon,
               hintText: hintText,
               hintStyle: Styles.textStyleRegular,
               enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   color: KMainColor,
                 ),
                 borderRadius: BorderRadius.circular(12),
               ),
               border: OutlineInputBorder(
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   color: KMainColor,
                 ),
                 borderRadius: BorderRadius.circular(12),

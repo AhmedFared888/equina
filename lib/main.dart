@@ -1,6 +1,5 @@
+import 'package:equina/Features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
-
-import 'Features/auth/presentation/views/auth_view.dart';
 
 void main() {
   runApp(const Equina());
@@ -11,9 +10,9 @@ class Equina extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AuthView(),
+      home: HomeView(),
     );
   }
 }
